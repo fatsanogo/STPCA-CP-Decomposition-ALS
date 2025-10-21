@@ -4,3 +4,4 @@ This repo contains the code for the full procedure initializing the CP factors u
 The function stpca_to_cp_init in cp_init.R is the master function that performs our full procedure.
 The code tO find the spatio temporal compenent is publicly available from the author website for the paper: "Spatio-temporal principal component analysis" by Mirosław Krzyśko,Peter NijkampORCID Icon,Waldemar Ratajczak,Waldemar Wołyński &Beata Wenerska.
 The fucntion STPCA.R and STPCA_RUN.R are the codes to find the spatio-temporal component. These are from the author website.
+The files test_hosvd_rand_cp.m and test_stpca_cp.m can be run for hosvd results and stpca results respectively using the toolboxes: https://www.tensorlab.net/ and https://www.tensortoolbox.org/
