@@ -4,11 +4,10 @@ load("eigen_stpca_No3.RData")
 load("my_data.RData")
 library(fda); library(rTensor); library(R.matlab); library(R.matlab)
 
-stpca_to_cp_init <- function(input_tensor, zw_C, K, A, R, period=NULL, time_points=NULL,
+stpca_to_cp_init <- function(input_tensor, zw_C, K, R, period=NULL, time_points=NULL,
                              pick=c("abs","plus","minus")) {
   pick <- match.arg(pick)
   dims <- dim(input_tensor); Tlen <- dims[1]; S <- dims[2]; V <- dims[3]
-  stopifnot(nrow(A)==S, ncol(A)==K*V)
   
   if (is.null(time_points)) time_points <- (1:Tlen)-0.5
   if (is.null(period)) period <- Tlen
@@ -71,7 +70,6 @@ init_res <- stpca_to_cp_init(
   R    = 2,          # your target CP rank
   zw_C = zw_C,
   K    = 25,
-  A    = A,
   period = 365.2425, # daily seasonal;
   pick = "abs"      
 )
