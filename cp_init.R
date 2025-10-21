@@ -1,4 +1,4 @@
-load("eigen_stpca_No3.RData")
+load("eigen_stpca_No3.RData")  #distance being used! See STPCA_run.R.
 #load("eigen_stpca_No4.RData")
 #load("eigen_stpca_No6.RData")
 load("my_data.RData")
